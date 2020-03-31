@@ -1,0 +1,46 @@
+.site-footer {
+	@extend .container;
+	background-color: $gray;
+	padding: $spacerX2 0;
+
+	.grid {
+		@extend .squeeze;
+
+		@media screen and (min-width: 768px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	.site-branding {
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+		}
+	}
+
+	.footer-link {
+		text-align: center;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+		}
+
+		a {
+			@include font-small();
+			display: inline-block;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: .3s transform ease-in-out;
+			color: $black;
+			padding: $spacerX2 0;
+
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+	}
+}

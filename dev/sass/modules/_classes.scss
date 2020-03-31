@@ -1,0 +1,93 @@
+.squeeze {
+
+	@media screen and (min-width: 768px) {
+		margin: 0 $spacerX2;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin: 0 $spacerX3;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-column-gap: $spacerX3;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+}
+
+.site-branding {
+	width: 230px;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wiggle-video {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (min-width: 998px) {
+
+	.come-in {
+		animation: come-in 1s ease forwards;
+
+		&.overcome {
+			transform: translateY(250px);
+		}
+
+		&.stat {
+			transform: translateY(-250px);
+		}
+	}
+
+	@keyframes come-in {
+		to {
+			transform: translateY(0);
+		}
+	}
+
+	.already-visible {
+		transform: translateX(0) !important;
+		animation: none !important;
+	}
+}
+
+.page-header {
+	@include section-x-padding();
+	margin: 2rem 0;
+	text-align: center;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	opacity: 0;
+	animation-name: fadeInUp;
+	-webkit-animation-name: fadeInUp;
+
+	h2, h3, h4 {
+		margin: 0;
+	}
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1; } }

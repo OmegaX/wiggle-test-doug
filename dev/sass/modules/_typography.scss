@@ -1,0 +1,52 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	margin-top: 0;
+	color: inherit;
+	text-align: inherit;
+}
+
+h1 {
+	@include font-huge();
+	margin-bottom: $spacerX2;
+}
+
+h2 {
+	@include font-big();
+	margin-bottom: $spacerX3;
+}
+
+h3 {
+	@include font-medium();
+	font-weight: 700;
+	margin-bottom: $spacerX2;
+}
+
+h4 {
+	@include font-small();
+	margin-bottom: $spacerX2;
+}
+
+p {
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+dd, figure {
+	margin: 0;
+}
+
+dl {
+	@include regular-text();
+	text-transform: uppercase;
+	margin: $spacerX2 0 0 0;
+
+	@media screen and (min-width: 768px) {
+		font-size: $font-medium;
+	}
+}
+
